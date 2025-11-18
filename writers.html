@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Content Writers - ContentConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+   <!-- Header Section -->
+   <div class="container">
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo" class="logo-img">
+        <h1>Flexihire</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="writers.html">Find Writers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
+</div>
+
+    
+    
+    <!-- Writer Categories Section -->
+    <section class="writer-categories">
+        <div class="container">
+            <h2 class="section-title">Browse Writers by Specialty</h2>
+            <div class="categories-grid">
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\technology.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>42 writers</p>
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\health&wellnes.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>38 writers</p>
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\finance.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Finance</h3>
+                    <p>35 writers</p>
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\marketing.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>56 writers</p>
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\ecommerce.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p>29 writers</p>
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\travel.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Travel</h3>
+                    <p>31 writers</p>
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\blog.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-rss"></i>
+                    </div>
+                    <h3>Blog Writers</h3>
+                    <p>78 writers</p>
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\technical writers.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Technical Writers</h3>
+                    <p>25 writers</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="featured-writers">
+        <h2 class="fw-title">✨ Featured Writers</h2>
+        <div class="fw-grid">
+      
+          <!-- Writer 1 -->
+          <div class="writer-box">
+            <img src="https://i.pinimg.com/originals/77/71/68/7771683223d86b237a3304d6f32828b9.jpg" alt="Sarah Johnson">
+            <h3>Sarah Johnson</h3>
+            <p class="role">Tech & SaaS Writer</p>
+            <div class="fw-tags">
+              <span>Technology</span><span>SaaS</span><span>SEO</span>
+            </div>
+            <div class="fw-action">
+                <a href="#" class="fw-btn"
+   onclick="openProfileModal(
+     'Sarah Johnson',
+     'Tech & SaaS Writer',
+     'images/writer1.jpg',
+     'Technology, SaaS, SEO',
+     '$120',
+     '7+ yrs'
+   )">
+  View Profile
+</a>
+
+<a href="#" class="fw-icon"
+   onclick="openContactModal('Sarah Johnson')">
+  <i class="fas fa-envelope"></i>
+</a>
+
+                
+            </div>
+          </div>
+      
+          <!-- Writer 2 -->
+          <div class="writer-box">
+            <img src="https://images.squarespace-cdn.com/content/v1/56ecb89c1bbee05366b7c704/1558114352886-X490SBMNLJ0BPBEV1NXY/BobanPhotography_Bobo-1.jpg" alt="David Lee">
+            <h3>David Lee</h3>
+            <p class="role">Finance Copywriter</p>
+            <div class="fw-tags">
+              <span>Finance</span><span>Investing</span><span>Reports</span>
+            </div>
+            <div class="fw-action">
+                <a href="#" class="fw-btn" onclick="openProfileModal('David Lee','Finance Copywriter','images/writer2.jpg','Finance, Investing, Reports','$135','6+ yrs')">View Profile</a>
+<a href="#" class="fw-icon" onclick="openContactModal('David Lee')"><i class="fas fa-envelope"></i></a>
+
+                
+            </div>
+          </div>
+      
+          <!-- Writer 3 -->
+          <div class="writer-box">
+            <img src="https://i.pinimg.com/originals/43/dc/da/43dcdae374bccd3b7f4bc02524dd765b.jpg" alt="Emily Davis">
+            <h3>Emily Davis</h3>
+            <p class="role">SEO Strategist</p>
+            <div class="fw-tags">
+              <span>SEO</span><span>Copywriting</span><span>Branding</span>
+            </div>
+            <div class="fw-action">
+                <a href="#" class="fw-btn" onclick="openProfileModal('Emily Davis','SEO Strategist','images/writer3.jpg','SEO, Copywriting, Branding','$150','10+ yrs')">View Profile</a>
+                <a href="#" class="fw-icon" onclick="openContactModal('Emily Davis')"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+      
+          <!-- Writer 4 -->
+          <div class="writer-box">
+            <img src="https://haircutinspiration.com/wp-content/uploads/Parted-Quiff.jpg" alt="Michael Chen">
+            <h3>Michael Chen</h3>
+            <p class="role">Blog & Health Writer</p>
+            <div class="fw-tags">
+              <span>Health</span><span>Wellness</span><span>Fitness</span>
+            </div>
+            <div class="fw-action">
+                <a href="#" class="fw-btn" onclick="openProfileModal('Michael Chen','Blog & Health Writer','images/writer4.jpg','Health, Wellness, Fitness','$110','5+ yrs')">View Profile</a>
+                <a href="#" class="fw-icon" onclick="openContactModal('Michael Chen')"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      <!-- Profile Modal -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeProfileModal()">&times;</span>
+      <div class="modal-body" style="text-align:center;">
+        <img id="modalAvatar" src="" class="modal-avatar" alt="Avatar">
+        <h2 id="modalName"></h2>
+        <p id="modalRole" style="color:#555;"></p>
+        <p><strong>Tags:</strong> <span id="modalTags"></span></p>
+        <p><strong>Rate:</strong> <span id="modalPrice"></span></p>
+        <p><strong>Experience:</strong> <span id="modalExp"></span></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeContactModal()">&times;</span>
+      <h2 style="text-align:center;">Contact <span id="contactName"></span></h2>
+      <form onsubmit="submitContactForm(event)" style="display:grid;gap:12px;">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message..." rows="4" required></textarea>
+        <button type="submit" style="padding:10px;background:#007bff;color:#fff;border:none;border-radius:6px;">Send</button>
+      </form>
+    </div>
+  </div>
+  
+      
+      
+
+    <!-- All Writers Section -->
+   
+                <!-- Writers List -->
+                <div class="writers-list">
+                    <!-- Writer List Item 1 -->
+                    <div class="writer-list-item">
+                        <div class="writer-list-avatar">
+                            <img src="https://th.bing.com/th/id/OIP.A8NuC395NbzgVp9StfoKvwHaLH?w=1000&h=1500&rs=1&pid=ImgDetMain" alt="James Wilson">
+                            <div class="writer-online-status online"></div>
+                        </div>
+                        <div class="writer-list-info">
+                            <div class="writer-list-header">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=5">James Wilson</a>
+                                    <span class="verified-badge" title="Verified Writer"><i class="fas fa-check-circle"></i></span>
+                                </h3>
+                                <div class="writer-rating">
+                                    <i class="fas fa-star"></i> 4.8 <span class="rating-count">(56 reviews)</span>
+                                </div>
+                            </div>
+                            <p class="writer-headline">SEO Content Strategist & Copywriter | Tech & SaaS Focus</p>
+                            <div class="writer-tags">
+                                <span class="tag">SEO</span>
+                                <span class="tag">Copywriting</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">SaaS</span>
+                            </div>
+                            <div class="writer-brief">
+                                I help tech companies and SaaS businesses attract and convert more customers with SEO-optimized content that ranks and sells. 5+ years specializing in technology content.
+                            </div>
+                        </div>
+                        <div class="writer-list-stats">
+                            <div class="stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span>98% Job Success</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Quick Response</span>
+                            </div>
+                            <div class="price">
+                                <span class="price-amount">$110</span>
+                                <span class="price-per">per 1,000 words</span>
+                            </div>
+                            <div class="writer-list-actions">
+                                <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'James Wilson',
+  'SEO Content Strategist & Copywriter | Tech & SaaS Focus',
+  'img/avatars/writer5.jpg',
+  'SEO, Copywriting, Technology, SaaS',
+  '$110',
+  '5+ years'
+)">View Profile</a>
+
+<a href="#" class="btn-contact" onclick="openContactModal('James Wilson')">
+  Contact
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writer List Item 2 -->
+                    <div class="writer-list-item">
+                        <div class="writer-list-avatar">
+                            <img src="https://i0.wp.com/kathleenreinmd.com/wp-content/uploads/2021/06/kathleen_rein_md_ny_fl_ct.jpg?fit=800%2C640&ssl=1" alt="Lisa Parks">
+                            <div class="writer-online-status"></div>
+                        </div>
+                        <div class="writer-list-info">
+                            <div class="writer-list-header">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=6">Lisa Parks</a>
+                                    <span class="verified-badge" title="Verified Writer"><i class="fas fa-check-circle"></i></span>
+                                </h3>
+                                <div class="writer-rating">
+                                    <i class="fas fa-star"></i> 4.7 <span class="rating-count">(41 reviews)</span>
+                                </div>
+                            </div>
+                            <p class="writer-headline">Travel & Lifestyle Content Creator | Storyteller & Photographer</p>
+                            <div class="writer-tags">
+                                <span class="tag">Travel</span>
+                                <span class="tag">Lifestyle</span>
+                                <span class="tag">Food</span>
+                                <span class="tag">Sustainability</span>
+                            </div>
+                            <div class="writer-brief">
+                                I craft engaging travel and lifestyle content that transports readers and inspires action. My background in photography allows me to deliver visual-forward content packages.
+                            </div>
+                        </div>
+                        <div class="writer-list-stats">
+                            <div class="stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span>97% Job Success</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Fast Delivery</span>
+                            </div>
+                            <div class="price">
+                                <span class="price-amount">$95</span>
+                                <span class="price-per">per 1,000 words</span>
+                            </div>
+                            <div class="writer-list-actions">
+                                <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'Lisa Parks',
+  'Travel & Lifestyle Content Creator | Storyteller & Photographer',
+  'img/avatars/writer6.jpg',
+  'Travel, Lifestyle, Food, Sustainability',
+  '$95',
+  '4+ years'
+)">View Profile</a>
+
+<a href="#" class="btn-contact" onclick="openContactModal('Lisa Parks')">
+  Contact
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writer List Item 3 -->
+                    <div class="writer-list-item">
+                        <div class="writer-list-avatar">
+                            <img src="https://th.bing.com/th/id/OIP.fmaL3p_JnNiL9nP57C2R7QAAAA?rs=1&pid=ImgDetMain" alt="Robert Kim">
+                            <div class="writer-online-status online"></div>
+                        </div>
+                        <div class="writer-list-info">
+                            <div class="writer-list-header">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=7">Robert Kim</a>
+                                </h3>
+                                <div class="writer-rating">
+                                    <i class="fas fa-star"></i> 4.5 <span class="rating-count">(28 reviews)</span>
+                                </div>
+                            </div>
+                            <p class="writer-headline">Educational Content Writer | Former Teacher | Curriculum Developer</p>
+                            <div class="writer-tags">
+                                <span class="tag">Education</span>
+                                <span class="tag">E-learning</span>
+                                <span class="tag">Curriculum</span>
+                                <span class="tag">Academic</span>
+                            </div>
+                            <div class="writer-brief">
+                                With 10+ years in education and curriculum development, I create engaging learning materials, courses, and educational content for all age groups. Specializing in STEM and humanities.
+                            </div>
+                        </div>
+                        <div class="writer-list-stats">
+                            <div class="stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Job Success</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>3-Day Delivery</span>
+                            </div>
+                            <div class="price">
+                                <span class="price-amount">$125</span>
+                                <span class="price-per">per 1,000 words</span>
+                            </div>
+                            <div class="writer-list-actions">
+                                <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'Robert Kim',
+  'Educational Content Writer | Former Teacher | Curriculum Developer',
+  'img/avatars/writer7.jpg',
+  'Education, E-learning, Curriculum, Academic',
+  '$125',
+  '10+ years'
+)">View Profile</a>
+
+<a href="#" class="btn-contact" onclick="openContactModal('Robert Kim')">
+  Contact
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writer List Item 4 -->
+                    <div class="writer-list-item">
+                        <div class="writer-list-avatar">
+                            <img src="https://th.bing.com/th/id/OIP.5pWJM3KbiyWcvwqDhZSHqAHaHa?rs=1&pid=ImgDetMain" alt="Olivia Martinez">
+                            <div class="writer-online-status"></div>
+                        </div>
+                        <div class="writer-list-info">
+                            <div class="writer-list-header">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=8">Olivia Martinez</a>
+                                    <span class="verified-badge" title="Verified Writer"><i class="fas fa-check-circle"></i></span>
+                                </h3>
+                                <div class="writer-rating">
+                                    <i class="fas fa-star"></i> 4.9 <span class="rating-count">(73 reviews)</span>
+                                </div>
+                            </div>
+                            <p class="writer-headline">Legal Content Specialist | Attorney & Professional Writer</p>
+                            <div class="writer-tags">
+                                <span class="tag">Legal</span>
+                                <span class="tag">Business</span>
+                                <span class="tag">Compliance</span>
+                                <span class="tag">Policy</span>
+                            </div>
+                            <div class="writer-brief">
+                                I translate complex legal concepts into clear, accessible content. Former practicing attorney with expertise in business law, compliance, and policy writing for diverse audiences.
+                            </div>
+                        </div>
+                        <div class="writer-list-stats">
+                            <div class="stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span>99% Job Success</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Reliable Delivery</span>
+                            </div>
+                            <div class="price">
+                                <span class="price-amount">$175</span>
+                                <span class="price-per">per 1,000 words</span>
+                            </div>
+                            <div class="writer-list-actions">
+                                <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'Olivia Martinez',
+  'Legal Content Specialist | Attorney & Professional Writer',
+  'img/avatars/writer8.jpg',
+  'Legal, Business, Compliance, Policy',
+  '$175',
+  '6+ years'
+)">View Profile</a>
+
+<a href="#" class="btn-contact" onclick="openContactModal('Olivia Martinez')">
+  Contact
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Writer List Item 5 -->
+                    <div class="writer-list-item">
+                        <div class="writer-list-avatar">
+                            <img src="https://th.bing.com/th/id/OIP.12hGgTMKYKh8cn4_s-4I6AHaJQ?w=819&h=1024&rs=1&pid=ImgDetMain" alt="Thomas Green">
+                            <div class="writer-online-status online"></div>
+                        </div>
+                        <div class="writer-list-info">
+                            <div class="writer-list-header">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=9">Thomas Green</a>
+                                </h3>
+                                <div class="writer-rating">
+                                    <i class="fas fa-star"></i> 4.6 <span class="rating-count">(37 reviews)</span>
+                                </div>
+                            </div>
+                            <p class="writer-headline">E-commerce & Product Description Specialist | Conversion-Focused</p>
+                            <div class="writer-tags">
+                                <span class="tag">E-commerce</span>
+                                <span class="tag">Product Desc</span>
+                                <span class="tag">Retail</span>
+                                <span class="tag">Conversion</span>
+                            </div>
+                            <div class="writer-brief">
+                                I craft compelling product descriptions and e-commerce content that converts browsers into buyers. My copy has helped increase conversion rates by an average of 23%.
+                            </div>
+                        </div>
+                        <div class="writer-list-stats">
+                            <div class="stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span>96% Job Success</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Quick Turnaround</span>
+                            </div>
+                            <div class="price">
+                                <span class="price-amount">$85</span>
+                                <span class="price-per">per 1,000 words</span>
+                            </div>
+                            <div class="writer-list-actions">
+                                <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'Thomas Green',
+  'E-commerce & Product Description Specialist | Conversion-Focused',
+  'img/avatars/writer9.jpg',
+  'E-commerce, Product Desc, Retail, Conversion',
+  '$85',
+  '5+ years'
+)">View Profile</a>
+
+<a href="#" class="btn-contact" onclick="openContactModal('Thomas Green')">
+  Contact
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="next-page">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Are You a Professional Content Writer?</h2>
+                <p>Join our community of talented writers and connect with clients looking for your expertise.</p>
+                <div class="cta-buttons">
+                    <a href="writer-signup.php" class="btn-primary">Create Writer Profile</a>
+                    <a href="how-it-works.php" class="btn-secondary">Learn How It Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>ContentConnect</h3>
+                    <p>The premier platform connecting talented content writers with businesses and individuals who need high-quality content.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>For Clients</h4>
+                    <ul>
+                        <li><a href="how-it-works.php">How It Works</a></li>
+                        <li><a href="find-writers.php">Find Writers</a></li>
+                        <li><a href="post-job.php">Post a Job</a></li>
+                        <li><a href="pricing.php">Pricing</a></li>
+                        <li><a href="client-resources.php">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>For Writers</h4>
+                    <ul>
+                        <li><a href="writer-signup.php">Become a Writer</a></li>
+                        <li><a href="writer-resources.php">Writer Resources</a></li>
+                        <li><a href="success-stories.php">Success Stories</a></li>
+                        <li><a href="writer-faq.php">Writer FAQ</a></li>
+                        <li><a href="community.php">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.php">Contact Us</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="terms.php">Terms of Service</a></li>
+                        <li><a href="privacy.php">Privacy Policy</a></li>
+                        <li><a href="blog.php">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Connect Freelancers. All rights reserved.</p>
+                <div class="payment-icons">
+                    <span>Secure Payments:</span>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-stripe"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Profile Modal -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeProfileModal()">&times;</span>
+      <div class="modal-body" style="text-align:center;">
+        <img id="modalAvatar" src="" alt="Avatar" class="modal-avatar" style="width:100px; border-radius:50%;">
+        <h2 id="modalName"></h2>
+        <p id="modalHeadline"></p>
+        <p><strong>Skills:</strong> <span id="modalSkills"></span></p>
+        <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+        <p><strong>Experience:</strong> <span id="modalExperience"></span></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeContactModal()">&times;</span>
+      <h2>Contact <span id="contactName"></span></h2>
+      <form onsubmit="submitContactForm(event)">
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <textarea placeholder="Message..." rows="4" required></textarea><br><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  
+       <!-- Scripts -->
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign Up - Pro UI Sliding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('https://img.freepik.com/premium-photo/technology-big-data-futuristic-background-digital-network-connection-blue-lightgenerative-ai_40944-147.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      height: 650px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .form-container {
+      display: flex;
+      width: 200%;
+      height: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      background: transparent;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .logo-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-top: 5px;
+    }
+
+    .form h2 {
+      color: #000;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form form {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .input-group {
+      position: relative;
+      width: 100%;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 16px 50px 16px 20px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+    }
+
+    .input-group i {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #888;
+      font-size: 18px;
+    }
+
+    .input-group label {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #666;
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label {
+      top: 8px;
+      left: 20px;
+      font-size: 11px;
+      color: #007bff;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(to right, #007bff, #3399ff);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #0056b3, #1a75ff);
+      transform: scale(1.02);
+    }
+
+    .toggle {
+      margin-top: 15px;
+      color: #000;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .toggle a {
+      color: #007bff;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      .form-container {
+        flex-direction: column;
+        width: 100%;
+        transform: translateX(0%) !important;
+      }
+      .form {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container" id="formContainer">
+      <div class="form">
+        <div class="logo">
+          <img src="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\logo.jpg" alt="Your Logo">
+          <div class="logo-name">Flexihire</div>
+        </div>
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <input type="email" id="login-email" required placeholder=" ">
+            <label for="login-email">Email</label>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="input-group">
+            <input type="password" id="login-password" required placeholder=" ">
+            <label for="login-password">Password</label>
+            <i class="fas fa-lock"></i>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <div class="toggle">Don't have an account? <a href="#" onclick="moveSlider('signup')">Sign Up</a></div>
+      </div>
+
+      <div class="form">
+        <div class="logo">
+          <img src="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\logo.jpg" alt="Your Logo">
+          <div class="logo-name">Flexihire</div>
+        </div>
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+          <div class="input-group">
+            <input type="text" id="signup-name" required placeholder=" ">
+            <label for="signup-name">Full Name</label>
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="input-group">
+            <input type="email" id="signup-email" required placeholder=" ">
+            <label for="signup-email">Email</label>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signup-password" required placeholder=" ">
+            <label for="signup-password">Password</label>
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signup-confirm" required placeholder=" ">
+            <label for="signup-confirm">Confirm Password</label>
+            <i class="fas fa-lock"></i>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="toggle">Already have an account? <a href="#" onclick="moveSlider('login')">Login</a></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function moveSlider(target) {
+      const container = document.getElementById('formContainer');
+      if (window.innerWidth <= 500) return;
+      container.style.transform = target === 'signup' ? 'translateX(-50%)' : 'translateX(0%)';
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+      if (!email || !password) {
+        Swal.fire('Error', 'Please fill in all fields!', 'error');
+      } else {
+        Swal.fire({
+          title: 'Success!',
+          text: 'Login Successful! Redirecting...',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        localStorage.setItem('username', name);
+
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1500);
+      }
+    });
+
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('signup-name').value.trim();
+      const email = document.getElementById('signup-email').value.trim();
+      const password = document.getElementById('signup-password').value.trim();
+      const confirm = document.getElementById('signup-confirm').value.trim();
+      if (!name || !email || !password || !confirm) {
+        Swal.fire('Error', 'Please fill in all fields!', 'error');
+      } else if (password !== confirm) {
+        Swal.fire('Error', 'Passwords do not match!', 'error');
+      } else {
+        Swal.fire({
+          title: 'Success!',
+          text: 'Sign Up Successful! Redirecting...',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        localStorage.setItem('username', name);
+
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1500);
+      }
+    });
+</script>
+</body>
+</html>
+ 
+    

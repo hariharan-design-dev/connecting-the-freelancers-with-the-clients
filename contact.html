@@ -1,0 +1,311 @@
+<?php
+// Initialize variables
+$name = $email = $subject = $message = '';
+$nameErr = $emailErr = $subjectErr = $messageErr = '';
+$successMessage = '';
+
+// Form processing
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Validate name
+    if (empty($_POST["name"])) {
+        $nameErr = "Name is required";
+    } else {
+        $name = test_input($_POST["name"]);
+    }
+    
+    // Validate email
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+    } else {
+        $email = test_input($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+        }
+    }
+    
+    // Validate subject
+    if (empty($_POST["subject"])) {
+        $subjectErr = "Subject is required";
+    } else {
+        $subject = test_input($_POST["subject"]);
+    }
+    
+    // Validate message
+    if (empty($_POST["message"])) {
+        $messageErr = "Message is required";
+    } else {
+        $message = test_input($_POST["message"]);
+    }
+    
+    // If no errors, process the form
+    if (empty($nameErr) && empty($emailErr) && empty($subjectErr) && empty($messageErr)) {
+        // In a real application, you would send an email or save to database here
+        // For now, we'll just set a success message
+        $successMessage = "Thank you for your message! We'll get back to you shortly.";
+        
+        // Clear form fields after successful submission
+        $name = $email = $subject = $message = '';
+    }
+}
+
+// Function to sanitize input data
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ContentConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   
+     <!-- Header Section -->
+     <div class="container">
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo" class="logo-img">
+        <h1>Flexihire</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="writers.html">Find Writers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <!-- Contact Banner Section -->
+    <section class="page-banner contact-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Reach out with any questions, suggestions, or support needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>9922008357@klu.ac.in</p>
+                    <p>For general inquiries, please allow 1-2 business days for a response.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Support</h3>
+                    <p>9922008357@klu.ac.in</p>
+                    <p>For urgent issues, our support team is available Monday-Friday, 9am-6pm EST.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Kalasalingam University </p>
+                    <p>Krishnankovil</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-container" style="display: flex; gap: 40px; padding: 40px;">
+        <!-- Contact Form -->
+        <div style="flex: 1; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2>Send Us a Message</h2>
+            <div style="background: #d4edda; padding: 10px; border-radius: 5px; margin-bottom: 20px; color: #155724;">
+                ✔️ Your message has been sent successfully!
+            </div>
+            <form method="post" class="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+                <label>Your Name</label>
+                <input type="text" name="name" value="" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    
+                <label>Email Address</label>
+                <input type="email" name="email" value="" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    
+                <label>Subject</label>
+                <input type="text" name="subject" value=" " style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    
+                <label>Message</label>
+                <textarea name="message" rows="5" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+    
+                <button type="submit" style="background-color: #007bff; color: white; padding: 12px; border: none; border-radius: 5px;">Send Message</button>
+            </form>
+        </div>
+    
+        <!-- Help Section -->
+        <div style="flex: 1; padding: 30px;">
+            <h2>We're Here to Help</h2>
+            <p>Whether you have questions about our platform, need assistance with your account, or want to provide feedback, our team is ready to assist you.</p>
+            <p>For writers with specific questions about projects or payments, please include your writer ID in your message for faster assistance.</p>
+            <p>For businesses looking for custom content solutions, our team can help you develop a content strategy tailored to your specific needs.</p>
+            <h4>Connect With Us</h4>
+            <p>
+                <i class="fab fa-facebook" style="margin-right: 10px;"></i>
+                <i class="fab fa-twitter" style="margin-right: 10px;"></i>
+                <i class="fab fa-instagram" style="margin-right: 10px;"></i>
+                <i class="fab fa-linkedin" style="margin-right: 10px;"></i>
+            </p>
+        </div>
+    </div>
+    
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I create an account on ContentConnect?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Creating an account is simple! Click on "Sign Up" in the top right corner of any page. Choose whether you're joining as a writer or a client, fill in your information, and you're ready to go. You can then complete your profile to stand out to potential clients or find the perfect writer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does payment work on ContentConnect?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer secure payment processing through our platform. Clients fund their projects upfront, and payments are held in escrow until the content is delivered and approved. Writers receive their payments within 3-5 business days after project completion. We accept major credit cards, PayPal, and bank transfers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I'm not satisfied with the content I receive?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We have a revision policy in place to ensure your satisfaction. Most writers offer 1-2 rounds of revisions included in their base price. If you're still not satisfied after revisions, our dispute resolution team can help mediate a solution that works for both parties.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I become a verified writer on the platform?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To become verified, complete your profile with portfolio samples, pass our writing assessment, and accumulate positive reviews from clients. Writers who maintain high ratings and consistent quality work can apply for verification after completing 10 successful projects on our platform.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-more">
+                <a href="faq.php" class="btn-secondary">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <!-- Replace with an actual map integration in production -->
+                <div class="map-placeholder">
+                    <img src="img/contact/map.jpg" alt="Office Location Map">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ContentConnect</h2>
+                    <p>The premier platform for content writers and clients</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="jobs.php">Browse Jobs</a></li>
+                        <li><a href="writers.php">Find Writers</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="help.php">Help Center</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="terms.php">Terms of Service</a></li>
+                        <li><a href="privacy.php">Privacy Policy</a></li>
+                        <li><a href="blog.php">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form action="newsletter-signup.php" method="post">
+                        <input type="email" name="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Connect Freelancers. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // JavaScript for FAQ toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.toggle-icon i');
+                
+                question.addEventListener('click', () => {
+                    // Toggle the active class
+                    item.classList.toggle('active');
+                    
+                    // Toggle the icon
+                    if (item.classList.contains('active')) {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                        answer.style.maxHeight = null;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

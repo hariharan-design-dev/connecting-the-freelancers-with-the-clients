@@ -1,0 +1,64 @@
+.featured-writers {
+    padding: 60px 30px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  #industryTitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 40px;
+  }
+  
+  .fw-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .writer-box {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    transition: 0.3s;
+  }
+  
+  .writer-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .writer-box h3 {
+    margin: 10px 0 5px;
+    color: #222;
+  }
+  
+  .writer-box .role {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .fw-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  .fw-tags span {
+    background-color: #eaf3ff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    color: #007bff;
+  }
+  

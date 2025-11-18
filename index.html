@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Content Topics - ContentConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+      
+      
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="container">
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo" class="logo-img">
+        <h1>Flexihire</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="writers.html">Find Writers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
+</div>
+<div class="navbar">
+    <div class="brand">Flexihire</div>
+    <div class="profile" id="profileBtn">
+      <img src="https://i.pinimg.com/originals/e6/78/4b/e6784b9cd722d02e014d7e60ebe25e39.jpg" alt="Profile">
+      <span id="usernameDisplay">User</span>
+      <div class="dropdown" id="profileDropdown">
+        <a href="#">View Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f3f4f6;
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background-color: white;
+      color: white;
+    }
+  
+    .navbar .brand {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  
+    .profile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+  
+    .profile img {
+      height: 42px;
+      width: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+  
+    .profile span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: white;
+      color: black;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+  
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #333;
+    }
+  
+    .dropdown a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+
+           
+    
+
+    <!-- Popular Topics Section -->
+    <section class="popular-topics">
+        <div class="container">
+            <h2 class="section-title">Popular Content Topics</h2>
+            <div class="topics-container">
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\technology.html" class="topic-tag">
+                    <i class="fas fa-laptop-code"></i> Technology
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\health&wellnes.html" class="topic-tag">
+                    <i class="fas fa-heartbeat"></i> Health & Wellness
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\finance.html" class="topic-tag">
+                    <i class="fas fa-chart-line"></i> Finance
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\marketing.html" class="topic-tag">
+                    <i class="fas fa-bullhorn"></i> Marketing
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\ecommerce.html" class="topic-tag">
+                    <i class="fas fa-shopping-cart"></i> E-commerce
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\travel.html" class="topic-tag">
+                    <i class="fas fa-plane"></i> Travel
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\food.html" class="topic-tag">
+                    <i class="fas fa-utensils"></i> Food & Cooking
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\education.html" class="topic-tag">
+                    <i class="fas fa-graduation-cap"></i> Education
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\sustainability.html" class="topic-tag">
+                    <i class="fas fa-leaf"></i> Sustainability
+                </a>
+                <a href="C:\Users\hhara\Downloads\connect freelancers\connect freelancers\entertainment.html" class="topic-tag">
+                    <i class="fas fa-film"></i> Entertainment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+
+                <!-- Writer Offers List -->
+                <div class="writer-offers">
+                    <!-- Writer Offer Card 1 -->
+                    <div class="writer-offer-card">
+                        <div class="writer-info">
+                            <div class="writer-avatar">
+                                <img src="https://i.pinimg.com/originals/e6/78/4b/e6784b9cd722d02e014d7e60ebe25e39.jpg" alt="Sarah Johnson">
+                                <div class="writer-online-status online"></div>
+                            </div>
+                            <div class="writer-details">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=1">Sarah Johnson</a>
+                                    <span class="verified-badge" title="Verified Writer"><i class="fas fa-check-circle"></i></span>
+                                </h3>
+                                <p class="writer-headline">Technology & SaaS Content Specialist</p>
+                                <div class="writer-meta">
+                                    <div class="writer-rating">
+                                        <i class="fas fa-star"></i> 4.9 <span class="rating-count">(127 reviews)</span>
+                                    </div>
+                                    <div class="writer-location">
+                                        <i class="fas fa-map-marker-alt"></i> United States
+                                    </div>
+                                </div>
+                                <div class="writer-tags">
+                                    <span class="tag">Technology</span>
+                                    <span class="tag">SaaS</span>
+                                    <span class="tag">B2B</span>
+                                    <span class="tag">SEO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-details">
+                            <p>I specialize in creating engaging, SEO-optimized content for technology companies and SaaS platforms. With 7+ years of experience in tech journalism and content marketing, I deliver value-driven content that converts.</p>
+                            <div class="offer-stats">
+                                <div class="stat">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Blog Posts</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-check"></i>
+                                    <span>98% Completion</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span>2 Day Delivery</span>
+                                </div>
+                            </div>
+                            <div class="offer-pricing">
+                                <div class="price">
+                                    <span class="price-label">Starting at:</span>
+                                    <span class="price-amount">$120</span>
+                                    <span class="price-per">per 1,000 words</span>
+                                </div>
+                                <div class="offer-actions">
+                                    <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'Sarah Johnson',
+  'Technology & SaaS Content Specialist',
+  'img/avatars/writer1.jpg',
+  'United States',
+  '4.9 (127 reviews)',
+  'Technology, SaaS, B2B, SEO',
+  'I specialize in creating engaging, SEO-optimized content for technology companies and SaaS platforms. With 7+ years of experience in tech journalism and content marketing, I deliver value-driven content that converts.',
+  '$120',
+  '2 Days',
+  '98%'
+)">View Profile</a>
+
+<a href="#" class="btn-contact"
+onclick="openContactModal(1, 'Sarah Johnson')">
+Contact
+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writer Offer Card 2 -->
+                    <div class="writer-offer-card">
+                        <div class="writer-info">
+                            <div class="writer-avatar">
+                                <img src="https://machohairstyles.com/wp-content/uploads/2017/03/professional-hairstyle-for-men-7-1455x1536.jpg" alt="David Chen">
+                                <div class="writer-online-status"></div>
+                            </div>
+                            <div class="writer-details">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=2">David Chen</a>
+                                    <span class="verified-badge" title="Verified Writer"><i class="fas fa-check-circle"></i></span>
+                                </h3>
+                                <p class="writer-headline">Health & Wellness Content Writer | Medical Background</p>
+                                <div class="writer-meta">
+                                    <div class="writer-rating">
+                                        <i class="fas fa-star"></i> 4.8 <span class="rating-count">(93 reviews)</span>
+                                    </div>
+                                    <div class="writer-location">
+                                        <i class="fas fa-map-marker-alt"></i> Canada
+                                    </div>
+                                </div>
+                                <div class="writer-tags">
+                                    <span class="tag">Healthcare</span>
+                                    <span class="tag">Wellness</span>
+                                    <span class="tag">Nutrition</span>
+                                    <span class="tag">Medical</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-details">
+                            <p>Former healthcare professional with 5+ years of content writing experience. I create authoritative, evidence-based health and medical content that builds trust. Specializing in nutrition, wellness, and healthcare technology.</p>
+                            <div class="offer-stats">
+                                <div class="stat">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Articles & Guides</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-check"></i>
+                                    <span>100% Completion</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3 Day Delivery</span>
+                                </div>
+                            </div>
+                            <div class="offer-pricing">
+                                <div class="price">
+                                    <span class="price-label">Starting at:</span>
+                                    <span class="price-amount">$150</span>
+                                    <span class="price-per">per 1,000 words</span>
+                                </div>
+                                <div class="offer-actions">
+                                    <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'David Chen',
+  'Health & Wellness Content Writer | Medical Background',
+  'img/avatars/writer2.jpg',
+  'Canada',
+  '4.8 (93 reviews)',
+  'Healthcare, Wellness, Nutrition, Medical',
+  'Former healthcare professional with 5+ years of content writing experience. I create authoritative, evidence-based health and medical content that builds trust. Specializing in nutrition, wellness, and healthcare technology.',
+  '$150',
+  '3 Days',
+  '100%'
+)">View Profile</a>
+
+<a href="#" class="btn-contact"
+onclick="openContactModal(2, 'David Chen')">
+Contact
+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writer Offer Card 3 -->
+                    <div class="writer-offer-card">
+                        <div class="writer-info">
+                            <div class="writer-avatar">
+                                <img src="https://img.freepik.com/premium-photo/headshot-photos-indian-women-dynamic-professions-occassions-indian-girl_978786-285.jpg?w=2000" alt="Emily Rodriguez">
+                                <div class="writer-online-status online"></div>
+                            </div>
+                            <div class="writer-details">
+                                <h3 class="writer-name">
+                                    <a href="https://i.pinimg.com/originals/77/71/68/7771683223d86b237a3304d6f32828b9.jpg">Emily Rodriguez</a>
+                                    <span class="verified-badge" title="Verified Writer"><i class="fas fa-check-circle"></i></span>
+                                </h3>
+                                <p class="writer-headline">Finance & Business Content Creator | Former Financial Analyst</p>
+                                <div class="writer-meta">
+                                    <div class="writer-rating">
+                                        <i class="fas fa-star"></i> 4.9 <span class="rating-count">(87 reviews)</span>
+                                    </div>
+                                    <div class="writer-location">
+                                        <i class="fas fa-map-marker-alt"></i> United Kingdom
+                                    </div>
+                                </div>
+                                <div class="writer-tags">
+                                    <span class="tag">Finance</span>
+                                    <span class="tag">Investing</span>
+                                    <span class="tag">Business</span>
+                                    <span class="tag">Fintech</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-details">
+                            <p>I transform complex financial concepts into engaging, easy-to-understand content. With an MBA and background in financial analysis, I create content that educates your audience while driving measurable business results.</p>
+                            <div class="offer-stats">
+                                <div class="stat">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>White Papers & Blogs</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-check"></i>
+                                    <span>95% Completion</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span>4 Day Delivery</span>
+                                </div>
+                            </div>
+                            <div class="offer-pricing">
+                                <div class="price">
+                                    <span class="price-label">Starting at:</span>
+                                    <span class="price-amount">$180</span>
+                                    <span class="price-per">per 1,000 words</span>
+                                </div>
+                                <div class="offer-actions">
+                                    <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'Emily Rodriguez',
+  'Finance & Business Content Creator | Former Financial Analyst',
+  'img/avatars/writer3.jpg',
+  'United Kingdom',
+  '4.9 (87 reviews)',
+  'Finance, Investing, Business, Fintech',
+  'I transform complex financial concepts into engaging, easy-to-understand content. With an MBA and background in financial analysis, I create content that educates your audience while driving measurable business results.',
+  '$180',
+  '4 Days',
+  '95%'
+)">View Profile</a>
+
+<a href="#" class="btn-contact"
+onclick="openContactModal(3, 'Emily Rodriguez')">
+Contact
+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writer Offer Card 4 -->
+                    <div class="writer-offer-card">
+                        <div class="writer-info">
+                            <div class="writer-avatar">
+                                <img src="https://kits.pixel-show.com/veapp/wp-content/uploads/sites/15/2020/04/portrait-of-a-confident-young-man-dressed-in-shirt-P4DTYKC-600x675.jpg" alt="Michael Thompson">
+                                <div class="writer-online-status"></div>
+                            </div>
+                            <div class="writer-details">
+                                <h3 class="writer-name">
+                                    <a href="writer-profile.php?id=4">Michael Thompson</a>
+                                </h3>
+                                <p class="writer-headline">E-commerce & Digital Marketing Content Specialist</p>
+                                <div class="writer-meta">
+                                    <div class="writer-rating">
+                                        <i class="fas fa-star"></i> 4.6 <span class="rating-count">(42 reviews)</span>
+                                    </div>
+                                    <div class="writer-location">
+                                        <i class="fas fa-map-marker-alt"></i> Australia
+                                    </div>
+                                </div>
+                                <div class="writer-tags">
+                                    <span class="tag">E-commerce</span>
+                                    <span class="tag">Marketing</span>
+                                    <span class="tag">Product Desc</span>
+                                    <span class="tag">Ad Copy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-details">
+                            <p>I help e-commerce businesses boost conversions with persuasive product descriptions, engaging email sequences, and SEO-friendly blog posts. My content has helped clients increase sales by 25-40% on product pages.</p>
+                            <div class="offer-stats">
+                                <div class="stat">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Product Content</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-check"></i>
+                                    <span>97% Completion</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1 Day Delivery</span>
+                                </div>
+                            </div>
+                            <div class="offer-pricing">
+                                <div class="price">
+                                    <span class="price-label">Starting at:</span>
+                                    <span class="price-amount">$100</span>
+                                    <span class="price-per">per 1,000 words</span>
+                                </div>
+                                <div class="offer-actions">
+                                    <a href="#" class="btn-view-profile" onclick="openProfileModal(
+  'Michael Thompson',
+  'E-commerce & Digital Marketing Content Specialist',
+  'img/avatars/writer4.jpg',
+  'Australia',
+  '4.6 (42 reviews)',
+  'E-commerce, Marketing, Product Desc, Ad Copy',
+  'I help e-commerce businesses boost conversions with persuasive product descriptions, engaging email sequences, and SEO-friendly blog posts. My content has helped clients increase sales by 25-40% on product pages.',
+  '$100',
+  '1 Day',
+  '97%'
+)">View Profile</a>
+
+<a href="#" class="btn-contact"
+onclick="openContactModal(4, 'Michael Thompson')">
+Contact
+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="page-item active">1</a>
+                        <a href="#" class="page-item">2</a>
+                        <a href="#" class="page-item">3</a>
+                        <a href="#" class="page-item">4</a>
+                        <a href="#" class="page-item">5</a>
+                        <a href="#" class="page-item next">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Guide -->
+    <section class="quick-guide">
+        <div class="container">
+            <h2 class="section-title">How to Hire the Perfect Content Writer</h2>
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Define Your Content Needs</h3>
+                        <p>Be specific about topic, tone, length, and purpose of your content. The more details you provide, the better matches you'll find.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Review Writer Profiles</h3>
+                        <p>Check portfolios, reviews, and expertise in your industry or topic. Look for writers with experience in similar projects.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Contact & Discuss</h3>
+                        <p>Reach out to potential writers to discuss your project, timeline, and expectations before making your decision.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Small</h3>
+                        <p>For new relationships, consider starting with a smaller project to ensure compatibility before committing to larger projects.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-cta">
+                <a href="blog writer.html" class="post-job-btn">📝 Post a Content Writing Job</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ContentConnect</h2>
+                    <p>The premier platform for content writers and clients</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="jobs.php">Browse Jobs</a></li>
+                        <li><a href="writers.php">Find Writers</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="help.php">Help Center</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="terms.php">Terms of Service</a></li>
+                        <li><a href="privacy.php">Privacy Policy</a></li>
+                        <li><a href="blog.php">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form action="newsletter-signup.php" method="post">
+                        <input type="email" name="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Connect Freelancers. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Profile Modal -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeProfileModal()">&times;</span>
+      <div class="modal-body" style="text-align:center;">
+        <img id="modalAvatar" src="" alt="Profile Pic" class="modal-avatar">
+        <h2 id="modalName"></h2>
+        <p><strong id="modalHeadline"></strong></p>
+        <p><i class="fas fa-map-marker-alt"></i> <span id="modalLocation"></span></p>
+        <p><i class="fas fa-star"></i> <span id="modalRating"></span></p>
+        <p><strong>Skills:</strong> <span id="modalSkills"></span></p>
+        <p style="margin-top:20px;" id="modalBio"></p>
+        <ul style="list-style:none; padding:0; margin-top:20px;">
+          <li><strong>Price:</strong> <span id="modalPrice"></span></li>
+          <li><strong>Delivery:</strong> <span id="modalDelivery"></span></li>
+          <li><strong>Completion Rate:</strong> <span id="modalCompletion"></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeContactModal()">&times;</span>
+      <h2>Contact <span id="contactWriterName"></span></h2>
+      <form id="contactForm" onsubmit="submitContactForm(event)">
+        <input type="hidden" id="contactWriterId" name="writer_id">
+        <div>
+          <label>Your Name</label><br>
+          <input type="text" name="your_name" required>
+        </div>
+        <div>
+          <label>Your Email</label><br>
+          <input type="email" name="your_email" required>
+        </div>
+        <div>
+          <label>Message</label><br>
+          <textarea name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-send">Send Message</button>
+      </form>
+      <div id="contactSuccess" style="display:none;">
+        <p>✅ Your message has been sent!</p>
+      </div>
+    </div>
+  </div>
+ 
+  
+  
+
+    <script src="script.js"></script>
+</body>
+</html>

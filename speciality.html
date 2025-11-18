@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Writers - ContentConnect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+    }
+
+    .category-writer-list {
+      padding: 50px 20px;
+      background-color: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 26px;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .writer-chat-list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .writer-item {
+      display: flex;
+      align-items: center;
+      background: #f5faff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      justify-content: space-between;
+      transition: 0.3s ease;
+    }
+
+    .writer-item:hover {
+      background-color: #e6f0ff;
+    }
+
+    .writer-item img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #007bff;
+      margin-right: 15px;
+    }
+
+    .writer-details {
+      flex: 1;
+    }
+
+    .writer-details h4 {
+      margin: 0;
+      color: #007bff;
+      font-size: 17px;
+    }
+
+    .writer-details p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .writer-meta {
+      text-align: right;
+    }
+
+    .writer-meta span {
+      display: block;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 5px;
+    }
+
+    .view-btn {
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      font-size: 13px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .view-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<section class="category-writer-list">
+  <h2 class="section-title">📚 Blog Writing Specialists</h2>
+  <div class="writer-chat-list">
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer1.jpg" alt="Sarah Johnson">
+      <div class="writer-details">
+        <h4>Sarah Johnson</h4>
+        <p>SEO Blog Writer • 5+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$100</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer2.jpg" alt="Emily Davis">
+      <div class="writer-details">
+        <h4>Emily Davis</h4>
+        <p>Travel Blogger • 3+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$90</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer3.jpg" alt="Michael Chen">
+      <div class="writer-details">
+        <h4>Michael Chen</h4>
+        <p>Tech Blog Writer • 4+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$95</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer4.jpg" alt="David Lee">
+      <div class="writer-details">
+        <h4>David Lee</h4>
+        <p>Content Strategist • 6+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$110</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer5.jpg" alt="Olivia Martinez">
+      <div class="writer-details">
+        <h4>Olivia Martinez</h4>
+        <p>Health & Lifestyle Blogger • 5+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$105</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer6.jpg" alt="Robert Kim">
+      <div class="writer-details">
+        <h4>Robert Kim</h4>
+        <p>Educational Blogger • 7+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$115</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer7.jpg" alt="Lisa Parks">
+      <div class="writer-details">
+        <h4>Lisa Parks</h4>
+        <p>Travel & Culture Writer • 4+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$92</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer8.jpg" alt="James Wilson">
+      <div class="writer-details">
+        <h4>James Wilson</h4>
+        <p>Finance Blog Writer • 8+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$120</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer9.jpg" alt="Thomas Green">
+      <div class="writer-details">
+        <h4>Thomas Green</h4>
+        <p>Tech Insights Blogger • 3+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$98</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+    <div class="writer-item" data-industry="blog">
+      <img src="images/writer10.jpg" alt="Linda Brown">
+      <div class="writer-details">
+        <h4>Linda Brown</h4>
+        <p>Food & Recipe Blogger • 5+ years</p>
+      </div>
+      <div class="writer-meta">
+        <span>$102</span>
+        <a href="#" class="view-btn">View</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
